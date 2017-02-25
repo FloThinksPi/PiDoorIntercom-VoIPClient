@@ -21,7 +21,7 @@
         <entry file="file://$PROJECT_DIR$/cmd/talkiepi/main.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
-              <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+              <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
               <folding>
                 <element signature="e#14#205#0" expanded="true" />
               </folding>
@@ -280,12 +280,12 @@
       <option name="presentableId" value="Default" />
       <updated>1488038781215</updated>
       <workItem from="1488038783502" duration="636000" />
-      <workItem from="1488039422569" duration="501000" />
+      <workItem from="1488039422569" duration="657000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1137000" />
+    <option name="totallyTimeSpent" value="1293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1024" height="741" extended-state="6" />
@@ -409,7 +409,7 @@
     <entry file="file://$PROJECT_DIR$/cmd/talkiepi/main.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <caret line="21" column="43" lean-forward="false" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
           <folding>
             <element signature="e#14#205#0" expanded="true" />
           </folding>
