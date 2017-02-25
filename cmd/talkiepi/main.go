@@ -14,12 +14,12 @@ import (
 
 func main() {
 	// Command line flags
-	server := flag.String("server", "talkiepi.projectable.me:64738", "the server to connect to")
-	username := flag.String("username", "", "the username of the client")
+	server := flag.String("server", "localhost:64738", "the server to connect to")
+	username := flag.String("username", "Intercom", "the username of the client")
 	password := flag.String("password", "", "the password of the server")
 	insecure := flag.Bool("insecure", true, "skip server certificate verification")
 	certificate := flag.String("certificate", "", "PEM encoded certificate and private key")
-	channel := flag.String("channel", "talkiepi", "mumble channel to join by default")
+	channel := flag.String("channel", "root", "mumble channel to join by default")
 
 	flag.Parse()
 

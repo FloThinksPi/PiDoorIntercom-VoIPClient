@@ -70,6 +70,7 @@ func (b *Talkiepi) OpenStream() {
 		os.Exit(1)
 	} else {
 		b.Stream = stream
+		b.TransmitStart() //Instantly start Transmitting
 	}
 }
 
