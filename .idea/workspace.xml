@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98652b62-00be-45eb-b4b4-c3a7574f4d8c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gpio.go" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PiDoorIntercomSystem-MumbleClient.iml" afterPath="$PROJECT_DIR$/.idea/PiDoorIntercomSystem-MumbleClient.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client.go" afterPath="$PROJECT_DIR$/client.go" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/systemd/mumble.service" afterPath="$PROJECT_DIR$/conf/systemd/mumble.service" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/talkiepi.go" afterPath="$PROJECT_DIR$/talkiepi.go" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmd/talkiepi/main.go" afterPath="$PROJECT_DIR$/cmd/talkiepi/main.go" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,17 +17,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.go" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmd/talkiepi/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-              <folding />
+            <state relative-caret-position="378">
+              <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+              <folding>
+                <element signature="e#14#205#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="talkiepi.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="talkiepi.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/talkiepi.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="54">
@@ -82,10 +79,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/cmd/talkiepi/main.go" />
         <option value="$PROJECT_DIR$/conf/systemd/mumble.service" />
         <option value="$PROJECT_DIR$/client.go" />
         <option value="$PROJECT_DIR$/talkiepi.go" />
+        <option value="$PROJECT_DIR$/cmd/talkiepi/main.go" />
       </list>
     </option>
   </component>
@@ -283,12 +280,12 @@
       <option name="presentableId" value="Default" />
       <updated>1488038781215</updated>
       <workItem from="1488038783502" duration="636000" />
-      <workItem from="1488039422569" duration="219000" />
+      <workItem from="1488039422569" duration="501000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="855000" />
+    <option name="totallyTimeSpent" value="1137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1024" height="741" extended-state="6" />
@@ -347,7 +344,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="65" lean-forward="false" selection-start-line="11" selection-start-column="65" selection-end-line="11" selection-end-column="65" />
-          <folding />
+          <folding>
+            <element signature="e#14#205#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -363,14 +362,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conf/systemd/mumble.service">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -391,14 +382,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmd/talkiepi/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="12" lean-forward="false" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -412,6 +395,24 @@
         <state relative-caret-position="54">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/systemd/mumble.service">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmd/talkiepi/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="44" lean-forward="false" selection-start-line="21" selection-start-column="44" selection-end-line="21" selection-end-column="44" />
+          <folding>
+            <element signature="e#14#205#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

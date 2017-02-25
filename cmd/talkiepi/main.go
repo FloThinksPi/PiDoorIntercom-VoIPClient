@@ -19,7 +19,7 @@ func main() {
 	password := flag.String("password", "", "the password of the server")
 	insecure := flag.Bool("insecure", true, "skip server certificate verification")
 	certificate := flag.String("certificate", "", "PEM encoded certificate and private key")
-	channel := flag.String("channel", "root", "mumble channel to join by default")
+	channel := flag.String("channel", "Root", "mumble channel to join by default")
 
 	flag.Parse()
 
