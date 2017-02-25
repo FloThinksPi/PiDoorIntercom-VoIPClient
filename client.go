@@ -17,8 +17,6 @@ func (b *Talkiepi) Init() {
 	b.Config.Attach(gumbleutil.AutoBitrate)
 	b.Config.Attach(b)
 
-	b.initGPIO()
-
 	b.Connect()
 
 	// our main run loop here... keep things alive
@@ -90,9 +88,6 @@ func (b *Talkiepi) TransmitStart() {
 
 	b.IsTransmitting = true
 
-	// turn on our transmit LED
-	b.LEDOn(b.TransmitLED)
-
 	b.Stream.StartSource()
 }
 
@@ -103,8 +98,6 @@ func (b *Talkiepi) TransmitStop() {
 
 	b.Stream.StopSource()
 
-	b.LEDOff(b.TransmitLED)
-
 	b.IsTransmitting = false
 }
 
@@ -114,8 +107,6 @@ func (b *Talkiepi) OnConnect(e *gumble.ConnectEvent) {
 	b.ConnectAttempts = 0
 
 	b.IsConnected = true
-	// turn on our online LED
-	b.LEDOn(b.OnlineLED)
 
 	fmt.Printf("Connected to %s (%d)\n", b.Client.Conn.RemoteAddr(), b.ConnectAttempts)
 	if e.WelcomeMessage != nil {
@@ -136,11 +127,6 @@ func (b *Talkiepi) OnDisconnect(e *gumble.DisconnectEvent) {
 
 	b.IsConnected = false
 
-	// turn off our LEDs
-	b.LEDOff(b.OnlineLED)
-	b.LEDOff(b.ParticipantsLED)
-	b.LEDOff(b.TransmitLED)
-
 	if reason == "" {
 		fmt.Printf("Connection to %s disconnected, attempting again in 10 seconds...\n", b.Address)
 	} else {
@@ -157,22 +143,6 @@ func (b *Talkiepi) ChangeChannel(ChannelName string) {
 		b.Client.Self.Move(channel)
 	} else {
 		fmt.Printf("Unable to find channel: %s\n", ChannelName)
-	}
-}
-
-func (b *Talkiepi) ParticipantLEDUpdate() {
-	time.Sleep(100 * time.Millisecond)
-
-	// If we have more than just ourselves in the channel, turn on the participants LED, otherwise, turn it off
-
-	var participantCount = len(b.Client.Self.Channel.Users)
-
-	if participantCount > 1 {
-		fmt.Printf("Channel '%s' has %d participants\n", b.Client.Self.Channel.Name, participantCount)
-		b.LEDOn(b.ParticipantsLED)
-	} else {
-		fmt.Printf("Channel '%s' has no other participants\n", b.Client.Self.Channel.Name)
-		b.LEDOff(b.ParticipantsLED)
 	}
 }
 
@@ -214,7 +184,6 @@ func (b *Talkiepi) OnUserChange(e *gumble.UserChangeEvent) {
 
 	fmt.Printf("Change event for %s: %s (%d)\n", e.User.Name, info, e.Type)
 
-	go b.ParticipantLEDUpdate()
 }
 
 func (b *Talkiepi) OnPermissionDenied(e *gumble.PermissionDeniedEvent) {
@@ -246,7 +215,6 @@ func (b *Talkiepi) OnPermissionDenied(e *gumble.PermissionDeniedEvent) {
 }
 
 func (b *Talkiepi) OnChannelChange(e *gumble.ChannelChangeEvent) {
-	go b.ParticipantLEDUpdate()
 }
 
 func (b *Talkiepi) OnUserList(e *gumble.UserListEvent) {
