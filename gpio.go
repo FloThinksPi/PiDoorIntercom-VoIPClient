@@ -1,11 +1,7 @@
 package talkiepi
 
 import (
-	"fmt"
-	"time"
-
 	"github.com/dchote/gpio"
-	"github.com/stianeikeland/go-rpio"
 )
 
 func (b *Talkiepi) initGPIO() {
